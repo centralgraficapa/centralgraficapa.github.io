@@ -1,2 +1,1 @@
-# centralgraficapa.github.io
-Site - Central Gráfica | Pouso Alegre
+# Site da Central Gráfica | Pouso Alegre
