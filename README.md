@@ -1,1 +1,1 @@
-# Site da Central Gráfica | Pouso Alegre - MG
+# Central Gráfica | Pouso Alegre - MG
