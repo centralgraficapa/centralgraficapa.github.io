@@ -1,0 +1,183 @@
+:root {
+  --blue: #000080;
+  --gray: #f1f1f1;
+  --white: #ffffff;
+  --page-spacing: 3rem;
+  --dark-gray: #d3d3d3;
+  --page-spacing-mobile: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  background: var(--gray);
+}
+
+.page {
+  background: var(--white);
+  box-shadow: 1px 8px 13px 1px var(--dark-gray);
+}
+
+.container-logo {
+  display: flex;
+  align-items: center;
+}
+
+.company-title {
+  color: var(--blue);
+  text-transform: uppercase;
+}
+
+.container-slogan {
+  text-align: right;
+  color: var(--white);
+  background: linear-gradient(to right, var(--white), var(--blue));
+}
+
+main {
+  color: var(--blue);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.address {
+  color: var(--blue);
+  text-align: right;
+}
+
+a {
+  color: var(--blue);
+}
+
+span {
+  color: var(--blue);
+}
+
+@media (min-width: 901px) {
+  body {
+    width: 80%;
+    margin-top: var(--page-spacing);
+  }
+
+  .container-logo {
+    padding-top: var(--page-spacing);
+    padding-left: var(--page-spacing);
+  }
+
+  .company-logo {
+    width: 4rem;
+  }
+
+  .company-title {
+    font-size: 2.2rem;
+    margin-left: 1rem;
+  }
+
+  .container-slogan {
+    padding: 0.5%;
+    margin-top: -0.8%;
+    padding-right: var(--page-spacing);
+  }
+
+  main {
+    margin-top: 5rem;
+  }
+
+  footer {
+    margin-top: 5rem;
+    padding: var(--page-spacing);
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "whats whats whats whats whats address"
+      "tel tel tel tel tel address"
+      "email email email email email address";
+  }
+
+  .whats {
+    grid-area: whats;
+  }
+
+  .tel {
+    grid-area: tel;
+  }
+
+  .email {
+    grid-area: email;
+  }
+
+  .address {
+    line-height: 1.5;
+    font-size: 1.2rem;
+    grid-area: address;
+  }
+
+  a {
+    font-size: 1.2rem;
+  }
+
+  span {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    width: 96%;
+    margin-top: var(--page-spacing-mobile);
+  }
+
+  .container-logo {
+    padding-top: var(--page-spacing-mobile);
+    padding-left: var(--page-spacing-mobile);
+  }
+
+  .company-logo {
+    width: 3rem;
+  }
+
+  .company-title {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .container-slogan {
+    padding: 0.8%;
+    margin-top: -1.2%;
+    padding-right: var(--page-spacing-mobile);
+  }
+
+  main {
+    margin-top: 3rem;
+    font-size: 0.8rem;
+  }
+
+  footer {
+    margin-top: 3rem;
+    padding: var(--page-spacing-mobile);
+  }
+
+  .address {
+    margin-top: 1.5rem;
+  }
+
+  .email {
+    margin-top: 0.3rem;
+  }
+
+  a {
+    font-size: 1.1rem;
+  }
+
+  span {
+    font-size: 1.1rem;
+  }
+}
