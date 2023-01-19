@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -66,62 +67,142 @@
       gtag("config", "G-FRLXQKENY5");
     </script>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap");
+      :root {
+        --blue: #000080;
+        --gray: #f1f1f1;
+        --white: #ffffff;
+        --page-spacing: 3rem;
+        --dark-gray: #d3d3d3;
+      }
       * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
         font-family: sans-serif;
       }
       body {
-        margin: 2% 8%;
+        width: 80%;
+        margin: 0 auto;
+        background: var(--gray);
+        margin-top: var(--page-spacing);
+      }
+      .page {
+        background: var(--white);
+        box-shadow: 1px 8px 13px 1px var(--dark-gray);
+      }
+      .container-logo {
+        display: flex;
+        align-items: center;
+        padding-top: var(--page-spacing);
+        padding-left: var(--page-spacing);
+      }
+      .company-logo {
+        width: 4rem;
+      }
+      .company-title {
+        font-size: 2.2rem;
+        margin-left: 1rem;
+        color: var(--blue);
+        text-transform: uppercase;
+      }
+      .container-slogan {
+        padding: 0.5%;
+        text-align: right;
+        margin-top: -0.8%;
+        color: var(--white);
+        padding-right: var(--page-spacing);
+        background: linear-gradient(to right, var(--white), var(--blue));
+      }
+      main {
+        margin-top: 5rem;
+        line-height: 1.5;
+        color: var(--blue);
+        text-align: center;
+      }
+      footer {
+        margin-top: 5rem;
+        padding: var(--page-spacing);
+      }
+      .grid-container {
+        display: grid;
+        grid-template-areas:
+          "whats whats whats whats whats address"
+          "tel tel tel tel tel address"
+          "email email email email email address";
+      }
+      .whats {
+        grid-area: whats;
+      }
+      .tel {
+        grid-area: tel;
+      }
+      .email {
+        grid-area: email;
+      }
+      .address {
+        line-height: 1.5;
+        text-align: right;
+        grid-area: address;
+        color: var(--blue);
+        font-size: 1.2rem;
+      }
+      a {
+        color: var(--blue);
+        font-size: 1.2rem;
+      }
+      span {
+        color: var(--blue);
+        font-size: 1.2rem;
       }
     </style>
-    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="icon" href="/assets/logo-favicon.png" />
     <link rel="canonical" href="https://www.centralgraficapa.com.br" />
     <title>Central Gráfica | É mais que impressão!</title>
   </head>
   <body>
-    <header>
-      <img src="assets/logo-site.svg" alt="Logotipo com as letra C e G" />
-      <h3>Central Gráfica</h3>
-      <h1>Impressos em Geral</h1>
-      <h2>
-        Convites de casamento, cartão de visita, panfletos, impressos
-        comerciais, encadernação capa dura TCC, e muito mais...
-      </h2>
-      <a
-        href="https://wa.me/5535992388226?text=Olá,%20poderia%20me%20fazer%20um%20orçamento?"
-        target="_blank"
-        >Solicite um orçamento</a
-      >
-    </header>
-    <main>
-      <h1>Em construção...</h1>
-    </main>
-    <footer>
-      <p>Central Gráfica · <span id="year">2023</span></p>
-      <address>
-        <p>
-          <a
-            href="https://wa.me/5535992388226?text=Olá,%20poderia%20me%20fazer%20um%20orçamento?"
-            target="_blank"
-            >WhatsApp</a
-          >
-        </p>
-        <p><a href="tel:+553534250426">(35) 3425-0426</a></p>
-        <p>
-          <a href="mailto:centralgraficapa@gmail.com"
-            >centralgraficapa@gmail.com</a
-          >
-        </p>
-        <p>Av. Dr. João Beraldo, 745 - Centro, Pouso Alegre - MG, 37550000</p>
-      </address>
-    </footer>
-    <script>
-      setYear();
-
-      function setYear() {
-        const yearDate = new Date().getFullYear();
-        const yearDOM = document.getElementById("year");
-        yearDOM.textContent = yearDate;
-      }
-    </script>
+    <div class="page">
+      <header>
+        <div class="container-logo">
+          <img
+            class="company-logo"
+            src="assets/logo-site-mono.svg"
+            alt="Logotipo com as letra C e G"
+          />
+          <h3 class="company-title">Central Gráfica</h3>
+        </div>
+        <div class="container-slogan">
+          <p>é mais que impressão!</p>
+        </div>
+      </header>
+      <main>
+        <h1>Impressos em geral <br />Encadernação capa dura</h1>
+      </main>
+      <footer>
+        <address class="grid-container">
+          <p class="whats">
+            <a
+              title="WhatsApp"
+              href="https://wa.me/5535992388226?text=Olá,%20poderia%20me%20fazer%20um%20orçamento?"
+              target="_blank"
+              ><strong>(35) 99238-8226</strong></a
+            >
+            <span> / </span>
+            <a title="Ligar" href="tel:+553534250426"
+              ><strong>3425-0426</strong></a
+            >
+          </p>
+          <p class="email">
+            <a title="Mensagem" href="mailto:centralgrafica.pa@gmail.com"
+              >centralgrafica.pa@gmail.com</a
+            >
+          </p>
+          <p class="address">
+            Av. Doutor João Beraldo, 745 - Centro <br />Pouso Alegre - Minas
+            Gerais, 37550-000
+          </p>
+        </address>
+      </footer>
+    </div>
   </body>
 </html>
