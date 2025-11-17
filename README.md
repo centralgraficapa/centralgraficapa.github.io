@@ -1,3 +1,3 @@
-## Central Gráfica | É mais que impressão!
+## Central Gráfica
 
 - 📍 Pouso Alegre - MG
